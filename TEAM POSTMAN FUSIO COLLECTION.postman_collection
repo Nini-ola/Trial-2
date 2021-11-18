@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "d15aa562-bff4-49c9-ba8c-0112816ab855",
+		"name": "FUSIO COLLECTION",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Todo Entries",
+			"item": [
+				{
+					"name": "Get All Todo Entries",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://demo.fusio-project.org/index.php/todo/",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"fusio-project",
+								"org"
+							],
+							"path": [
+								"index.php",
+								"todo",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Todo Entries with id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://demo.fusio-project.org/index.php/todo/:todoid",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"fusio-project",
+								"org"
+							],
+							"path": [
+								"index.php",
+								"todo",
+								":todoid"
+							],
+							"variable": [
+								{
+									"key": "todoid",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Todo Entries with status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://demo.fusio-project.org/index.php/todo/:status",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"fusio-project",
+								"org"
+							],
+							"path": [
+								"index.php",
+								"todo",
+								":status"
+							],
+							"variable": [
+								{
+									"key": "status",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Todo Entries with title",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demo.fusio-project.org/index.php/todo/?title",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"fusio-project",
+								"org"
+							],
+							"path": [
+								"index.php",
+								"todo",
+								""
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get All Entries",
+			"item": [
+				{
+					"name": "Get All Entries with script",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// To get value of a specific query param\r",
+									"console.log(pm.request.url.query.get(\"apiVersion\"));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://demo.fusio-project.org/index.php/?apiVersion",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"fusio-project",
+								"org"
+							],
+							"path": [
+								"index.php",
+								""
+							],
+							"query": [
+								{
+									"key": "apiVersion",
+									"value": null
+								}
+							]
+						},
+						"description": "https://demo.fusio-project.org/index.php/"
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Entries",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://demo.fusio-project.org/index.php/",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"fusio-project",
+								"org"
+							],
+							"path": [
+								"index.php",
+								""
+							]
+						},
+						"description": "https://demo.fusio-project.org/index.php/"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get entry per ID",
+			"item": [
+				{
+					"name": "Get entry per ID 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://demo.fusio-project.org/index.php/todo?todoid=2",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"fusio-project",
+								"org"
+							],
+							"path": [
+								"index.php",
+								"todo"
+							],
+							"query": [
+								{
+									"key": "todoid",
+									"value": "2"
+								}
+							]
+						},
+						"description": "https://demo.fusio-project.org/index.php/todo/:todo_id"
+					},
+					"response": []
+				},
+				{
+					"name": "Get entry per ID with script id 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonDataArray = pm.response.json()\r",
+									"console.log(jsonDataArray.entry[1])"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://demo.fusio-project.org/index.php/todo?todoid=2",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"fusio-project",
+								"org"
+							],
+							"path": [
+								"index.php",
+								"todo"
+							],
+							"query": [
+								{
+									"key": "todoid",
+									"value": "2"
+								}
+							]
+						},
+						"description": "https://demo.fusio-project.org/index.php/todo/:todo_id"
+					},
+					"response": []
+				},
+				{
+					"name": "Get entry per ID id 20",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://demo.fusio-project.org/index.php/todo?todoid=20",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"fusio-project",
+								"org"
+							],
+							"path": [
+								"index.php",
+								"todo"
+							],
+							"query": [
+								{
+									"key": "todoid",
+									"value": "20"
+								}
+							]
+						},
+						"description": "https://demo.fusio-project.org/index.php/todo/:todo_id"
+					},
+					"response": []
+				},
+				{
+					"name": "Get entry per ID with script id 20",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonDataArray = pm.response.json()\r",
+									"console.log(jsonDataArray.entry[19])"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://demo.fusio-project.org/index.php/todo?todoid=20",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"fusio-project",
+								"org"
+							],
+							"path": [
+								"index.php",
+								"todo"
+							],
+							"query": [
+								{
+									"key": "todoid",
+									"value": "20"
+								}
+							]
+						},
+						"description": "https://demo.fusio-project.org/index.php/todo/:todo_id"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
